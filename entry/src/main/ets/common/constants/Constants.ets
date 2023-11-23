@@ -60,8 +60,8 @@ class itemStyle {
   CIRCLE_TEXT_COLOR_STOP_1: number = 0.5;
   CIRCLE_TEXT_COLOR_STOP_2: number = 1.0;
   BAR_HEIGHT: number = 48;
-  LAYOUT_WEIGHT_LEFT: string = "20%";
-  LAYOUT_WEIGHT_CENTER: string = '20%';
+  LAYOUT_WEIGHT_LEFT: string = "30%";
+  LAYOUT_WEIGHT_CENTER: string = '50%';
   LAYOUT_WEIGHT_RIGHT: string = '20%';
   BORDER_WIDTH: number = 1;
   COLOR_BLUE: Resource = $r('app.color.item_color');
@@ -75,8 +75,8 @@ export const ItemStyle: itemStyle = {
   CIRCLE_TEXT_COLOR_STOP_1: 0.5,
   CIRCLE_TEXT_COLOR_STOP_2: 1.0,
   BAR_HEIGHT: 48,
-  LAYOUT_WEIGHT_LEFT: "20%",
-  LAYOUT_WEIGHT_CENTER: '20%',
+  LAYOUT_WEIGHT_LEFT: "30%",
+  LAYOUT_WEIGHT_CENTER: '50%',
   LAYOUT_WEIGHT_RIGHT: '20%',
   BORDER_WIDTH: 1,
   COLOR_BLUE: $r('app.color.item_color'),
