@@ -1,0 +1,55 @@
+{
+  "ohos-module-entry": {
+    "SELECT_TARGET": "default",
+    "MODULE_BUILD_DIR": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build",
+    "TARGETS": {
+      "default": {
+        "SOURCE_ROOT": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/src/main",
+        "RESOURCES_PATH": [
+          "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/src/main/resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/outputs/default",
+          "INTERMEDIA_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates",
+          "JS_ASSETS_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/loader_out/default",
+          "JS_LITE_ASSETS_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/loader_out_lite/default",
+          "RES_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/res/default",
+          "RES_PROFILE_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/res/default/resources/base/profile",
+          "ETS_SUPER_VISUAL_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/cache/default/default@CompileArkTS/esmodule",
+          "JS_SUPER_VISUAL_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/cache/default/default@CompileJS/jsbundle",
+          "WORKER_LOADER": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/loader/default/loader.json",
+          "MANIFEST_JSON": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/manifest/default",
+          "OUTPUT_METADATA_JSON": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/hap_metadata/default/output_metadata.json"
+        }
+      },
+      "ohosTest": {
+        "SOURCE_ROOT": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/src/ohosTest",
+        "RESOURCES_PATH": [
+          "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/src/ohosTest/resources"
+        ],
+        "BUILD_PATH": {
+          "OUTPUT_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/outputs/ohosTest",
+          "INTERMEDIA_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates",
+          "JS_ASSETS_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/loader_out/ohosTest",
+          "JS_LITE_ASSETS_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/loader_out_lite/ohosTest",
+          "RES_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/res/ohosTest",
+          "RES_PROFILE_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/res/ohosTest/resources/base/profile",
+          "ETS_SUPER_VISUAL_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/cache/ohosTest/ohosTest@CompileArkTS/esmodule",
+          "JS_SUPER_VISUAL_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/cache/ohosTest/ohosTest@CompileJS/jsbundle",
+          "WORKER_LOADER": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/loader/ohosTest/loader.json",
+          "MANIFEST_JSON": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/manifest/ohosTest",
+          "OUTPUT_METADATA_JSON": "/Users/boai/develop/github/BAHMDemo/RankDemo/entry/build/default/intermediates/hap_metadata/ohosTest/output_metadata.json"
+        }
+      }
+    }
+  },
+  "ohos-project": {
+    "SELECT_PRODUCT_NAME": "default",
+    "MODULE_BUILD_DIR": "/Users/boai/develop/github/BAHMDemo/RankDemo/build",
+    "BUNDLE_NAME": "com.example.hmdemo1",
+    "BUILD_PATH": {
+      "OUTPUT_PATH": "/Users/boai/develop/github/BAHMDemo/RankDemo/build/outputs/default"
+    }
+  },
+  "version": 1
+}
