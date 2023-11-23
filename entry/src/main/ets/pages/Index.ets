@@ -35,8 +35,37 @@ struct Index {
       let person2 = new Employee("boai", 18, "打工仔")
       console.log(person2.getEmployeeInfo())
 
+      test2()
     })
   }
+}
+
+function test2() {
+
+
+
+
+}
+
+function test() {
+
+  let list1 = [1, "bbb", false]
+
+  for (let element in list1) {
+    console.log(`list1打印in：${element}`)
+  }
+
+  for (let item of list1) {
+    console.log(`list1打印of：${item}`)
+  }
+
+  for (let index = 0; index < list1.length; index++) {
+    const element = list1[index];
+    console.log(`list2打印for： ${element}`)
+  }
+
+
+
 }
 
 function add(x, y) {
