@@ -2,7 +2,7 @@
 	"BuildOptions":{
 		"BUNDLE_NAME":"com.example.hmdemo1",
 		"BUILD_PATH":{
-			"OUTPUT_PATH":"/Users/boai/develop/github/BAHMDemo/RankDemo/build/outputs/default"
+			"OUTPUT_PATH":"/Users/boai/develop/github/BAHMDemo/Demo1-RankList/build/outputs/default"
 		},
 		"SELECT_BUILD_PRODUCT":"default"
 	},
