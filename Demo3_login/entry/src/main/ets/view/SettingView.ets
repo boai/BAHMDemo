@@ -22,7 +22,6 @@ export default struct SettingView {
           Image($r('app.media.account'))
             .width($r('app.float.setting_account_size'))
             .height($r('app.float.setting_account_size'))
-
           Column() {
             Text($r('app.string.setting_account_name'))
               .fontSize($r('app.float.setting_account_fontSize'))
@@ -52,7 +51,7 @@ export default struct SettingView {
         }
         .backgroundColor(Color.White)
         .width(CommonConstats.FULL_PARENT)
-        .height(CommonConstats.SET_LIST_WIDTH)
+        .height(CommonConstats.SET_LIST_HEIGHT)
         .divider({
           strokeWidth: $r('app.float.setting_list_strokeWidth'),
           color: Color.Grey,
@@ -84,19 +83,17 @@ export default struct SettingView {
         Image(item.img)
           .width($r('app.float.setting_size'))
           .height($r('app.float.setting_size'))
-
         Text(item.title)
           .fontSize($r('app.float.normal_text_size'))
       }
 
-      if (item.others === null) {
+      if (item.others != null) {
+        Toggle({ type: ToggleType.Switch, isOn: false })
+      } else {
         Image($r('app.media.right_grey'))
           .width($r('app.float.setting_jump_width'))
           .height($r('app.float.setting_jump_height'))
-      } else {
-        Toggle({ type: ToggleType.Switch, isOn: false })
       }
-
     }
     .justifyContent(FlexAlign.SpaceBetween)
     .width(CommonConstats.FULL_PARENT)

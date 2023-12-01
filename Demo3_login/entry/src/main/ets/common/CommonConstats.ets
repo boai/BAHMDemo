@@ -9,7 +9,7 @@ export default class CommonConstats {
   static readonly LOGIN_METHODS_SPACE = 44
   static readonly FULL_PARENT = '100%'
   static readonly BUTTON_WIDTH = '90%'
-  static readonly SET_LIST_WIDTH = '42%'
+  static readonly SET_LIST_HEIGHT = '42%'
   static readonly HOME_TAB_INDEX = 0
   static readonly MINE_TAB_INDEX = 1
 }

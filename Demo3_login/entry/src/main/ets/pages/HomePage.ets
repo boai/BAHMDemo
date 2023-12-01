@@ -9,10 +9,10 @@ import SettingView from '../view/SettingView'
 @Component
  struct HomePage {
 
-  @State currentIndex: number = CommonConstats.HOME_TAB_INDEX
+  @State currentIndex: number = CommonConstats.MINE_TAB_INDEX
   private tabsController: TabsController = new TabsController()
 
-  aboutToAppear() {
+  onPageShow() {
     this.tabsController.changeIndex(this.currentIndex)
   }
 
