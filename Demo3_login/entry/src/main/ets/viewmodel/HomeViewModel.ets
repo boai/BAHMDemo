@@ -43,8 +43,8 @@ export class HomeViewModel {
       new ItemData($r('app.string.setting_list_about'), $r('app.media.about')),
       new ItemData($r('app.string.setting_list_storage'), $r('app.media.storage')),
       new ItemData($r('app.string.setting_list_privacy'), $r('app.media.privacy'))
-    ]
-    return settingListData
+    ];
+    return settingListData;
   }
 }
 

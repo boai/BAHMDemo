@@ -12,6 +12,10 @@ import SettingView from '../view/SettingView'
   @State currentIndex: number = CommonConstats.HOME_TAB_INDEX
   private tabsController: TabsController = new TabsController()
 
+  aboutToAppear() {
+    this.tabsController.changeIndex(this.currentIndex)
+  }
+
   build() {
     Tabs({
       barPosition: BarPosition.End,
