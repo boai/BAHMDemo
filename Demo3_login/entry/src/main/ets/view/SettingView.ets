@@ -1,4 +1,4 @@
-import CommonConstats from '../common/CommonConstats'
+import CommonConstats from '../common/CommonConstants'
 import HomeViewModel from '../viewmodel/HomeViewModel'
 import ItemData from '../viewmodel/ItemData'
 

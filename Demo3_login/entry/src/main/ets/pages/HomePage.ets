@@ -1,15 +1,13 @@
 
-import app from '@system.app';
-import CommonConstats from '../common/CommonConstats'
+import CommonConstants from '../common/CommonConstants'
 import HomeView from '../view/HomeView'
 import SettingView from '../view/SettingView'
-
 
 @Entry
 @Component
  struct HomePage {
 
-  @State currentIndex: number = CommonConstats.MINE_TAB_INDEX
+  @State currentIndex: number = CommonConstants.HOME_TAB_INDEX
   private tabsController: TabsController = new TabsController()
 
   onPageShow() {
@@ -26,16 +24,16 @@ import SettingView from '../view/SettingView'
       }
       .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
       .backgroundColor($r('app.color.mainPage_backgroundColor'))
-      .tabBar(this.TabBuilder(CommonConstats.HOME_TITLE, CommonConstats.HOME_TAB_INDEX, $r('app.media.home_normal'), $r('app.media.home_selected')))
+      .tabBar(this.TabBuilder(CommonConstants.HOME_TITLE, CommonConstants.HOME_TAB_INDEX, $r('app.media.home_normal'), $r('app.media.home_selected')))
 
       TabContent() {
         SettingView()
       }
       .padding({ left: $r('app.float.mainPage_padding'), right: $r('app.float.mainPage_padding') })
       .backgroundColor($r('app.color.mainPage_backgroundColor'))
-      .tabBar(this.TabBuilder(CommonConstats.MINE_TITLE, CommonConstats.MINE_TAB_INDEX, $r('app.media.mine_normal'), $r('app.media.mine_selected')))
+      .tabBar(this.TabBuilder(CommonConstants.MINE_TITLE, CommonConstants.MINE_TAB_INDEX, $r('app.media.mine_normal'), $r('app.media.mine_selected')))
     }
-    .width(CommonConstats.FULL_PARENT)
+    .width(CommonConstants.FULL_PARENT)
     .backgroundColor(Color.White)
     .barHeight($r('app.float.mainPage_barHeight'))
     .barMode(BarMode.Fixed)
@@ -57,7 +55,7 @@ import SettingView from '../view/SettingView'
     }
     .justifyContent(FlexAlign.Center)
     .height($r('app.float.mainPage_barHeight'))
-    .width(CommonConstats.FULL_PARENT)
+    .width(CommonConstants.FULL_PARENT)
     .onClick(() => {
       this.currentIndex = index
       this.tabsController.changeIndex(this.currentIndex)

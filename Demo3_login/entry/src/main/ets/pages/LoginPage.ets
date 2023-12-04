@@ -1,7 +1,7 @@
 import router from '@ohos.router'
 import App from '@system.app';
 import Prompt from '@system.prompt';
-import CommonConstats from '../common/CommonConstats';
+import CommonConstats from '../common/CommonConstants';
 import BALogger from '../utils/BALogger'
 import prompt from '@ohos.promptAction';
 
