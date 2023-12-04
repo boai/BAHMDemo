@@ -2,7 +2,7 @@ import router from '@ohos.router'
 import App from '@system.app';
 import Prompt from '@system.prompt';
 import CommonConstats from '../common/CommonConstants';
-import BALogger from '../utils/BALogger'
+import BALogger from '../../../../../../Demo4_TargetManagement/entry/src/main/utils/BALogger'
 import prompt from '@ohos.promptAction';
 
 @Extend(TextInput) function inputStyle() {

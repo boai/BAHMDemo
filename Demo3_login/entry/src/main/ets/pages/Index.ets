@@ -1,6 +1,6 @@
 import router from '@ohos.router'
 import App from '@system.app';
-import BALogger from '../utils/BALogger'
+import BALogger from '../../../../../../Demo4_TargetManagement/entry/src/main/utils/BALogger'
 
 
 const TAG = '[IndexPage]';
