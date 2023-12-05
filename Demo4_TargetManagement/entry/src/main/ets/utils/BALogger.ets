@@ -2,15 +2,15 @@
 import hilog from '@ohos.hilog';
 import { Level } from '@ohos/hypium';
 
-export class BALogger {
+ class BALogger {
 
   private domain: number
   private prefix: string
   private format: string = `BALog %{public}s，%{public}s`
 
-  constructor(prefix: string) {
+  constructor(prefix: string = 'MyApp', domain: number = 0xFF00) {
     this.prefix = prefix
-    this.domain = 0xFF00
+    this.domain = domain
   }
 
   debug(...args: string[]) {
@@ -38,7 +38,7 @@ export class BALogger {
   }
 }
 
-export default new BALogger('[PageRouter]')
+export default new BALogger('TargetManagement', 0xFF00);
 
 
 
