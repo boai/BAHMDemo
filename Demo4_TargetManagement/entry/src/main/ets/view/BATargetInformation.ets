@@ -2,9 +2,9 @@ import { BACommonConstants } from '../constants/BACommonConstants'
 
 @Component
 export default struct BATargetInformation {
-  @Prop latestUpdateDate: string = ''
-  @Prop totalTaskNumber: number = 0
-  @Prop completedTasksNumber = 0
+  @Prop latestUpdateDate: string = '';
+  @Prop totalTasksNumber: number = 0;
+  @Prop completedTasksNumber: number = 0;
 
   build() {
 
@@ -68,14 +68,14 @@ export default struct BATargetInformation {
             .fontSize($r('app.float.progress_font'))
             .fontWeight(BACommonConstants.FONT_WEIGHT)
             .fontColor($r('app.color.main_blue'))
-          Text(`/${this.totalTaskNumber}`)
+          Text(`/${this.totalTasksNumber}`)
             .fontSize($r('app.float.progress_font'))
             .fontWeight(BACommonConstants.FONT_WEIGHT)
         }
 
         Progress({
           value: this.completedTasksNumber,
-          total: this.totalTaskNumber,
+          total: this.totalTasksNumber,
           type: ProgressType.Ring
         })
           .color($r('app.color.main_blue'))

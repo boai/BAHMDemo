@@ -3,6 +3,7 @@ import { BACommonConstants } from '../constants/BACommonConstants'
 import BATargetInformation from '../view/BATargetInformation'
 import BADataModel, { TaskItemBean } from '../viewmodel/BADataModel'
 import promptAction from '@ohos.promptAction';
+import getCurrentTime from '../utils/BADateUtil';
 
 
 @Entry
@@ -12,23 +13,30 @@ struct BAMainPage {
   @State totalTasksNumber: number = 0
   @State completedTasksNumber: number = 0
   @State latestUpdateDate: string = BACommonConstants.DEFAULT_PROGRESS_VALUE
-  // @Provide @Watch('onProgressChanged') overAllProgressChanged: boolean = false;
+  @Provide @Watch('onProgressChanged') overAllProgressChanged: boolean = false;
 
+  onProgressChanged() {
+    this.totalTasksNumber = this.targetData.length
+    this.completedTasksNumber = this.targetData.filter((item: TaskItemBean) => {
+      return item.progressValue == BACommonConstants.SLIDER_MAX_VALUE
+    }).length
+    this.latestUpdateDate = getCurrentTime()
+  }
 
   build() {
     Column() {
-
       this.titleBar()
-
       BATargetInformation({
         latestUpdateDate: this.latestUpdateDate,
-        totalTaskNumber: this.totalTasksNumber,
+        totalTasksNumber: this.totalTasksNumber,
         completedTasksNumber: this.completedTasksNumber
       })
 
     }
+    .width(BACommonConstants.FULL_WIDTH)
+    .height(BACommonConstants.FULL_HEIGHT)
+    .backgroundColor($r('app.color.index_background'))
   }
-
 
   @Builder titleBar() {
     Column() {
