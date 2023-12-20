@@ -1,8 +1,7 @@
 import { BACommonConstants } from '../constants/BACommonConstants'
 import getCurrentTime from '../utils/BADateUtil'
-import BADataModel, { TaskItemBean }
-
-'../viewmodel/BADataModel'
+import BADataModel, { TaskItemBean } from '../viewmodel/BADataModel'
+import BAProgressEditPanel from './BAProgressEditPanel'
 
 @Component
 export default struct BATargetListItem {
@@ -34,14 +33,33 @@ export default struct BATargetListItem {
         this.targetItem()
         if (this.isExpanded) {
           Blank()
-
+          BAProgressEditPanel({
+            slidingProgress: this.latestProgress,
+            onCancel: () => this.isExpanded = false,
+            onClickOK: (progress: number): void => {
+              this.latestProgress = progress
+              this.updateDate = getCurrentTime()
+              let result = BADataModel.updateProgress(this.index, this.latestProgress, this.updateDate)
+              if (result) {
+                this.overAllProgressChanged = !this.overAllProgressChanged
+              }
+              this.isExpanded = false
+            },
+            sliderMode: $sliderMode
+          })
+            .transition({
+              scale: {
+                x: BACommonConstants.TRANSITION_ANIMATION_X,
+                y: BACommonConstants.TRANSITION_ANIMATION_Y
+              }
+            })
         }
       }
       .padding({
         top: $r('app.float.list_padding_top'),
         left: $r('app.float.list_padding'),
         bottom: $r('app.float.list_padding_bottom'),
-        right: $r('app.float.list_padding_right')
+        right: this.isEditModel ? $r('app.float.list_edit_padding') : $r('app.float.list_padding')
       })
       .width(BACommonConstants.FULL_WIDTH)
       .height(this.isExpanded ? $r('app.float.expanded_item_height') : $r('app.float.list_item_height'))
@@ -108,8 +126,9 @@ export default struct BATargetListItem {
         }
         .margin({ top: $r('app.float.text_margin') })
       }
-      .width(BACommonConstants.FULL_WIDTH)
+      .alignItems(HorizontalAlign.End)
     }
+    .width(BACommonConstants.FULL_WIDTH)
   }
 }
 

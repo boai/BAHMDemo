@@ -2,14 +2,15 @@ import { BACommonConstants } from '../constants/BACommonConstants'
 
 @Component
 export default struct BATargetInformation {
-  @Prop latestUpdateDate: string = '';
-  @Prop totalTasksNumber: number = 0;
-  @Prop completedTasksNumber: number = 0;
+  @Prop latestUpdateDate: string = ''
+  @Prop totalTasksNumber: number = 0
+  @Prop completedTasksNumber: number = 0
 
   build() {
 
     Column() {
       this.targetItem()
+      this.overallProgress()
     }
     .padding($r('app.float.target_padding'))
     .width(BACommonConstants.MAIN_BOARD_WIDTH)

@@ -15,7 +15,7 @@ export default function getCurrentTime(): string {
   }
 
   if (Number.parseInt(second) < BACommonConstants.TEN) {
-    second = `0${second}}`
+    second = `0${second}`
   }
 
   let time = `${year}-${month}-${day} ${hours}:${minutes}:${second}`
