@@ -1,4 +1,3 @@
-
 import {
   ALL_PERCENT,
   MARGIN_FONT_SIZE,
@@ -12,21 +11,112 @@ import {
 
 @Component
 export struct BAVideoPlaySlider {
-
   private controller: VideoController = new VideoController()
+  @Consume currentStringTime: string
+  @Consume currentTime: number
+  @Consume durationTime: number
+  @Consume durationStringTime: string
+  @Consume isOpacity: boolean
   @Consume isPlay: boolean
+  @Consume flag: boolean
+  @Consume isLoading: boolean
+  @Consume progressVal: number
 
   build() {
-      Row({ space: MARGIN_FONT_SIZE.FIRST_MARGIN }) {
-        Image(this.isPlay ? $r('app.media.ic_pause'):$r('app.media.ic_play'))
-          .width(IMAGE_SIZE)
-          .height(IMAGE_SIZE)
-          // .margin({})
-      }
-    .opacity(DEFAULT_OPACITY)
+    Row({ space: MARGIN_FONT_SIZE.FIRST_MARGIN }) {
+      Image(this.isPlay ? $r('app.media.ic_pause') : $r('app.media.ic_play'))
+        .width(IMAGE_SIZE)
+        .height(IMAGE_SIZE)
+        .margin({
+          left: MARGIN_FONT_SIZE.FIRST_MARGIN
+        })
+        .onClick(() => {
+          this.iconOnClick()
+        })
+
+      Text(this.currentStringTime)
+        .fontSize(MARGIN_FONT_SIZE.SECOND_MARGIN)
+        .fontColor(Color.White)
+        .margin({
+          left: MARGIN_FONT_SIZE.FIRST_MARGIN
+        })
+
+      Slider({
+        value: this.currentTime,
+        min: 0,
+        max: this.durationTime,
+        step: 1,
+        style: SliderStyle.OutSet
+      })
+        .blockColor($r('app.color.white'))
+        .width(STRING_PERCENT.SLIDER_WITH)
+        .trackColor(Color.Gray)
+        .selectedColor($r('app.color.white'))
+        .showSteps(true)
+        .showTips(true)
+        .trackThickness(this.isOpacity ? SMALL_TRACK_THICK_NESS : BIG_TRACK_THICK_NESS)
+        .onChange((value: number, mode: SliderChangeMode) => {
+          this.sliderOnChange(value, mode)
+        })
+
+      Text(this.durationStringTime)
+        .fontSize(MARGIN_FONT_SIZE.SECOND_MARGIN)
+        .margin({
+          right: MARGIN_FONT_SIZE.FIRST_MARGIN
+        })
+        .fontColor(Color.White)
+    }
+    .opacity(this.isOpacity ? DEFAULT_OPACITY : 1)
     .width(ALL_PERCENT)
     .alignItems(VerticalAlign.Center)
     .justifyContent(FlexAlign.Center)
   }
 
+  sliderOnChange(value: number, mode: SliderChangeMode) {
+    this.currentTime = Number.parseInt(value.toString())
+    this.controller.setCurrentTime(Number.parseInt(value.toString()), SeekMode.Accurate)
+    if (mode === SliderChangeMode.Begin || mode === SliderChangeMode.Moving) {
+      this.isOpacity = false
+    }
+    if (mode === SliderChangeMode.End) {
+      this.isOpacity = true
+    }
+  }
+
+  iconOnClick() {
+    if (this.isPlay === true) {
+      this.controller.pause()
+      this.isPlay = false
+      this.isOpacity = false
+      return
+    }
+
+    if (this.flag === true) {
+      this.controller.start()
+      this.isPlay = true
+      this.isOpacity = true
+    } else {
+      this.isLoading = true
+
+      let intervalLoading = setInterval(() => {
+        if (this.progressVal >= STACK_STYLE.PROGRESS_TOTAL) {
+          this.progressVal = 0
+        } else {
+          this.progressVal += STACK_STYLE.PROGRESS_STEP
+        }
+
+      }, STACK_STYLE.MILLI_SECONDS)
+
+      let intervalFlag = setInterval(() => {
+        if (this.flag === true) {
+          this.controller.start()
+          this.isPlay = true
+          this.isOpacity = true
+          this.isLoading = true
+          clearInterval(intervalFlag)
+          clearInterval(intervalLoading)
+        }
+      }, STACK_STYLE.MILLI_SECONDS)
+    }
+  }
 }

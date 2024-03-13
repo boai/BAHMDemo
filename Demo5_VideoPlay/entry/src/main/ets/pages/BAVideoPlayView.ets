@@ -18,11 +18,11 @@ export struct BAVideoPlayView {
   private startIconResource: Resource = $r('app.media.ic_public_play')
   private backIconResource: Resource = $r('app.media.ic_back')
 
-  private isPlay: boolean = false
-  private isOpacity: boolean = false
-  private isLoading: boolean = false
-  private progressVal: number = 0
-  private flag: boolean = false
+  @Provide isPlay: boolean = false
+  @Provide isOpacity: boolean = false
+  @Provide isLoading: boolean = false
+  @Provide progressVal: number = 0
+  @Provide flag: boolean = false
 
   aboutToAppear() {
     this.source
@@ -35,8 +35,6 @@ export struct BAVideoPlayView {
   build() {
 
     Column() {
-      // BAVideoPlaySlider
-
       Row() {
         Image(this.backIconResource)
           .width(MARGIN_FONT_SIZE.FOURTH_MARGIN)
