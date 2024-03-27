@@ -27,7 +27,7 @@ export class BAPickerUtil {
     })
   }
 
-  datePickerDialog(dataCallBack: Function) {
+  datePickerDialog(dataCallback: Function) {
     DatePickerDialog.show({
       start: new Date('1900-1-1'),
       end: new Date,
@@ -40,18 +40,40 @@ export class BAPickerUtil {
         let month: number = Number(value.month)
         let day: number = Number(value.day)
         let birthDate: string = this.getBirthDate(year, month, day)
-        dataCallBack(birthDate);
+        dataCallback(birthDate);
       }
     });
   }
 
-
+  textPickerDialog(textArray: Resource, selectedIndex: number, resultCallback: Function) {
+    if (this.isEmpty(textArray)) {
+        BALogger.error('textArray is null', 'BAPickerUtil')
+      return
+    }
+    TextPickerDialog.show({
+      range: textArray,
+      selected: selectedIndex,
+      onAccept: (result: TextPickerResult) => {
+        resultCallback(result)
+      },
+      onCancel: () => {
+        BALogger.info('点击了取消按钮', 'BAPickerUtil')
+      }
+    })
+  }
 
   getBirthDate(year: number, month: number, day: number): string {
     let birthDate: string = `${year}${'年'}` + `${month}${`月`}` + `${day}${'日'}`
     return birthDate
   }
 
+  isEmpty(obj: object | string):boolean {
+    return obj === undefined || obj === null || obj === '';
+  }
+
+  isEmptyArray(array: Array<any>):boolean {
+    return this.isEmpty(array) || array.length === 0;
+  }
 
 }
 

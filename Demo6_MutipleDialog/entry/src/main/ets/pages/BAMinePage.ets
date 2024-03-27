@@ -3,6 +3,7 @@ import BATextSelectWidget from '../view/BATextSelectWidget'
 import BALogger from '../utils/BALogger'
 import BACustomDialogWidget from '../view/BACustomDialogWidget'
 import BAPickerUtil from '../utils/BAPickerUtil'
+import Context from '@ohos.app.ability.common'
 
 @Entry
 @Component
@@ -10,6 +11,7 @@ struct BAMinePage {
   @State message: string = 'Hello World'
   @State birthdate: string = ''
   @State sex: string = ''
+  @State sexIndex: number = 0
   @State hobbies: string = ''
   private sexArray: Resource = $r('app.strarray.sex_array')
   customDialogController: CustomDialogController = new CustomDialogController({
@@ -30,14 +32,28 @@ struct BAMinePage {
     let month = date.getMonth() + 1
     let day = date.getDate()
     this.birthdate = BAPickerUtil.getBirthDate(year, month, day)
+
+    let context = getContext(this)
+    if (BAPickerUtil.isEmpty(context) || BAPickerUtil.isEmpty(context.resourceManager)) {
+      BALogger.error('context or resourceManager is null', 'BAMinePage')
+      return
+    }
+    let manager = context.resourceManager
+    manager.getStringValue($r('app.string.default_sex').id, (error, sexValue) => {
+      if (!BAPickerUtil.isEmpty(error)) {
+        BALogger.error('error = ' + JSON.stringify(error), 'BAMinePage')
+      } else {
+        this.sex = sexValue
+      }
+    })
   }
 
   build() {
     Column() {
 
       Image($r('app.media.ic_back'))
-        .width("26vp")
-        .height("26vp")
+        .width(26)
+        .height(26)
         .alignSelf(ItemAlign.Start)
         .margin({
           left: 16,
@@ -45,6 +61,10 @@ struct BAMinePage {
         })
         .padding({
           left: 16
+        })
+        .onClick(() => {
+          let context = getContext(this) as Context.UIAbilityContext
+          BAPickerUtil.AlertDialog(context)
         })
 
       Column() {
@@ -86,6 +106,10 @@ struct BAMinePage {
           content: $sex,
           onItemClick: () => {
             BALogger.info('点击了性别')
+            BAPickerUtil.textPickerDialog(this.sexArray, this.sexIndex, (result: TextPickerResult) => {
+              this.sex = result.value
+              this.sexIndex = result.index
+            })
           }
         })
 
@@ -100,6 +124,7 @@ struct BAMinePage {
           content: $hobbies,
           onItemClick: () => {
             BALogger.info('点击了兴趣')
+            this.customDialogController.open()
           }
         })
       }
