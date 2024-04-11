@@ -1,4 +1,4 @@
-import BALogger from '../utils/BALogger'
+import BALogger from '../../../../../../Demo7_CustomRefresh/entry/src/main/ets/common/utils/BALogger'
 import BAPickerUtil from '../utils/BAPickerUtil'
 import BAHobbyItem from '../viewmodel/BAHobbyItem'
 

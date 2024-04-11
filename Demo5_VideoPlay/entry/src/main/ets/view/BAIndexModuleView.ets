@@ -66,11 +66,13 @@ struct HorizontalItem {
             params: { source: this.source }
           })
         })
+        .borderColor(Color.Blue)
       Text(this.videoName)
         .margin({
           top: MARGIN_FONT_SIZE.FIRST_MARGIN,
           bottom: MARGIN_FONT_SIZE.FIRST_MARGIN
         })
+        // .fontColor(Color.Orange)
         .textAlign(TextAlign.Center)
         .fontSize(MARGIN_FONT_SIZE.SECOND_MARGIN)
     }

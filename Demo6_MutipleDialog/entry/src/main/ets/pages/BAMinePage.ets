@@ -1,6 +1,6 @@
 import BATextInputWidget from '../view/BATextInputWidget'
 import BATextSelectWidget from '../view/BATextSelectWidget'
-import BALogger from '../utils/BALogger'
+import BALogger from '../../../../../../Demo7_CustomRefresh/entry/src/main/ets/common/utils/BALogger'
 import BACustomDialogWidget from '../view/BACustomDialogWidget'
 import BAPickerUtil from '../utils/BAPickerUtil'
 import Context from '@ohos.app.ability.common'

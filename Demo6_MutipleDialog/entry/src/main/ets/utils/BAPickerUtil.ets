@@ -1,6 +1,6 @@
 
 import Context from '@ohos.app.ability.common'
-import BALogger from './BALogger'
+import BALogger from '../../../../../../Demo7_CustomRefresh/entry/src/main/ets/common/utils/BALogger'
 
 export class BAPickerUtil {
 
