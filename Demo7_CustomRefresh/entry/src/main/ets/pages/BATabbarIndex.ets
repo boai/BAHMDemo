@@ -1,7 +1,9 @@
 import BAConstants from '../common/constants/BAConstants'
 import BADimensionUtil from '../common/utils/BADimensionUtil'
 import BATabbarModel from '../viewmodel/BATabbarModel'
+import BADemoListIndex from './BADemoListIndex'
 import BAFileManagerIndex from './BAFileManagerIndex'
+import BAWebIndex from './BAWebIndex'
 
 @Entry
 @Component
@@ -31,8 +33,12 @@ struct BATabbarIndex {
     Tabs({ barPosition: BarPosition.End, index: this.currentPageIndex }) {
       ForEach(BAConstants.TabbarData, (item: BATabbarModel, index: number | undefined) => {
         TabContent() {
-          if (index === BAConstants.Default_Tabbar_SelectedIndex) {
+          if (index === BAConstants.FILE_MANAGER_Z_INDEX) {
             BAFileManagerIndex()
+          } else if (index == 0) {
+            BADemoListIndex()
+          } else if (index === 2) {
+            BAWebIndex()
           }
         }
         .tabBar(this.BATabbarBuilder(item, index))

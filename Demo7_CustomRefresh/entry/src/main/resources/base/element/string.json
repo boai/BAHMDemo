@@ -27,6 +27,10 @@
     {
       "name": "file_index_title",
       "value": "Cloud space"
+    },
+    {
+      "name": "empty",
+      "value": "empty"
     }
   ]
 }
