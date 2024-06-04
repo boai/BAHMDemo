@@ -8,8 +8,8 @@ import BADemoListItemModel from '../viewmodel/BADemoListItemModel'
 @Component
 export default struct BADemoListIndex {
   build() {
-    List( {space: 10} ) {
-      ListItem() {
+    Scroll() {
+      Column() {
         Column() {
           Text("快速入门")
             .fontColor(Color.Black)
@@ -21,9 +21,7 @@ export default struct BADemoListIndex {
 
           BASwiperView()
         }
-      }
 
-      ListItem() {
         Column() {
 
           Row() {
@@ -62,9 +60,7 @@ export default struct BADemoListIndex {
           .height(180)
           // .backgroundColor(Color.Orange)
         }
-      }
 
-      ListItem() {
         Column({space: 10}) {
           Text("入门教程")
             .fontColor(Color.Black)
@@ -84,9 +80,14 @@ export default struct BADemoListIndex {
           .listDirection(Axis.Vertical)
           .align(Alignment.TopStart)
         }
+        .margin({top: 10})
       }
     }
+    .scrollable(ScrollDirection.Vertical)
+    .scrollBarColor(Color.Orange)
     .scrollBar(BarState.Auto)
+    .scrollBarWidth(10)
+    .edgeEffect(EdgeEffect.Spring)
     .width(BAConstants.Full_Length)
     .height(BAConstants.Full_Length)
     .backgroundColor("#EEEEEE")
