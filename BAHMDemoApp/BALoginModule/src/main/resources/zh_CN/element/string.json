@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "模块描述"
+    },
+    {
+      "name": "BALoginModuleAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "BALoginModuleAbility_label",
+      "value": "label"
+    }
+  ]
+}

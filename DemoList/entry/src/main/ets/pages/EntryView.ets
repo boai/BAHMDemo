@@ -1,5 +1,5 @@
 
-import { BATab1Page } from '../../../feature/tab1/page/BATab1Page'
+import { BATab1Page } from '../../../feature/ets/tab1/page/BATab1Page'
 
 @Entry
 @Component

@@ -1,0 +1,28 @@
+{
+  "module": {
+    "name": "BALoginModule",
+    "type": "feature",
+    "description": "$string:module_desc",
+    "mainElement": "BALoginModuleAbility",
+    "deviceTypes": [
+      "phone",
+      "tablet",
+      "2in1"
+    ],
+    "deliveryWithInstall": true,
+    "installationFree": false,
+    "pages": "$profile:main_pages",
+    "abilities": [
+      {
+        "name": "BALoginModuleAbility",
+        "srcEntry": "./ets/baloginmoduleability/BALoginModuleAbility.ets",
+        "description": "$string:BALoginModuleAbility_desc",
+        "icon": "$media:layered_image",
+        "label": "$string:BALoginModuleAbility_label",
+        "startWindowIcon": "$media:startIcon",
+        "startWindowBackground": "$color:start_window_background",
+        "exported": true
+      }
+    ]
+  }
+}

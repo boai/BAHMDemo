@@ -1,0 +1,16 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "BALoginModuleAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "BALoginModuleAbility_label",
+      "value": "label"
+    }
+  ]
+}
