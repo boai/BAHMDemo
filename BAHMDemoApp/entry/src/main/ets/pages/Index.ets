@@ -1,3 +1,4 @@
+import { XTEasyHUD, XTHUDToastOptions } from '@jxt/xt_hud';
 import { router } from '@kit.ArkUI';
 import { BARouterConstants } from '../Constants/BARouterConstants';
 
@@ -5,6 +6,17 @@ import { BARouterConstants } from '../Constants/BARouterConstants';
 @Component
 struct Index {
   @State message: string = 'Hello World';
+
+  aboutToAppear(): void {
+    // Toast 全局配置，如无特殊需要，可以不配置，其他 HUD 同理
+    XTEasyHUD.globalConfigToast((options: XTHUDToastOptions) => {
+      options.isQueueMode = false
+      options.hidingDelay = 1000
+      options.isModal = false
+      options.alignment = DialogAlignment.Center
+      // options.textColor = Color.Red
+    })
+  }
 
   build() {
     Column() {
@@ -22,7 +34,7 @@ struct Index {
         .height(50)
         .onClick(() => {
           console.log("点击了【点击登录】按钮")
-          router.pushUrl({ url: BARouterConstants.BAROUTER_PATH_LOGIN })
+          router.pushUrl({ url: BARouterConstants.BAROUTER_PATH_LOGININDEX })
         })
     }
     .justifyContent(FlexAlign.Center)

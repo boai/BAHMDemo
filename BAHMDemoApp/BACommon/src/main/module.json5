@@ -1,6 +1,6 @@
 {
   "module": {
-    "name": "BALoginModule",
+    "name": "BACommon",
     "type": "har",
     "deviceTypes": [
       "default",

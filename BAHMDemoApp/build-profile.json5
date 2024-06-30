@@ -32,16 +32,12 @@
       ]
     },
     {
+      "name": "BACommon",
+      "srcPath": "./BACommon",
+    },
+    {
       "name": "BALoginModule",
       "srcPath": "./BALoginModule",
-      "targets": [
-        {
-          "name": "default",
-          "applyToProducts": [
-            "default"
-          ]
-        }
-      ]
     }
   ]
 }

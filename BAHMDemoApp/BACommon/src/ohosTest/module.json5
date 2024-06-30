@@ -1,6 +1,6 @@
 {
   "module": {
-    "name": "BALoginModule_test",
+    "name": "BACommon_test",
     "type": "feature",
     "deviceTypes": [
       "default",
