@@ -1,1 +1,1 @@
-export { BALoginPage } from './src/main/ets/components/BALoginPage'
+export { BALoginPage } from './src/main/ets/pages/BALoginPage'

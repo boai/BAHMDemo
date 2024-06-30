@@ -3,10 +3,12 @@ import { BALogger } from '@ohos/bacommon'
 
 @Component
 export struct BALoginPage {
-  @BuilderParam onClickLoginButton?: () => void
 
   @State phone: string = ''
   @State pwd: string = ''
+
+  onClickLoginButton = () => {
+  }
 
   build() {
     Column() {
@@ -53,7 +55,6 @@ export struct BALoginPage {
           }
           this.onClickLoginButton!()
         })
-
     }
     .width("100%")
     .height("100%")

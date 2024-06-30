@@ -3,6 +3,8 @@ import { BATabViewModel } from '../viewmodel/BATabViewModel'
 import json from '@ohos.util.json'
 import { JSON } from '@kit.ArkTS'
 import { BACommonConstants } from '@ohos/bacommon'
+import { XTEasyHUDToast } from '@jxt/xt_hud/src/main/ets/components/_XTEasyHUD'
+import { XTEasyHUD } from '@jxt/xt_hud'
 
 @Entry
 @Component
@@ -40,7 +42,12 @@ export struct BACustomTabIndex {
       Tabs({ barPosition: BarPosition.End, index: this.currentPageIndex }) {
         ForEach(BATabViewModel.getTabData(), (item: BATabBarItem, index: number) => {
           TabContent() {
-
+            if (index === 0) {
+              Text("不要点我")
+                .onClick(()=>{
+                  XTEasyHUD.showToast("点我干嘛")
+                })
+            }
           }
           .tabBar(this.tabbarBuilder(item, index))
         }, (item: BATabBarItem) => JSON.stringify(item))

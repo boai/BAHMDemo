@@ -1,5 +1,6 @@
 import { XTEasyHUD, XTHUDToastOptions } from '@jxt/xt_hud';
 import { router } from '@kit.ArkUI';
+import { BALogger } from '@ohos/bacommon';
 import { BARouterConstants } from '../Constants/BARouterConstants';
 
 @Entry
@@ -33,8 +34,16 @@ struct Index {
         .width("60%")
         .height(50)
         .onClick(() => {
-          console.log("点击了【点击登录】按钮")
-          router.pushUrl({ url: BARouterConstants.BAROUTER_PATH_LOGININDEX })
+          BALogger.info("点击了【点击登录】按钮", 'Index')
+          router.replaceUrl({
+            url: BARouterConstants.ROUTER_PATH_LOGININDEX // 目标url
+          }, router.RouterMode.Standard, (err) => {
+            if (err) {
+              console.error(`Invoke replaceUrl failed, code is ${err.code}, message is ${err.message}`);
+              return;
+            }
+            console.info('Invoke replaceUrl succeeded.');
+          })
         })
     }
     .justifyContent(FlexAlign.Center)
