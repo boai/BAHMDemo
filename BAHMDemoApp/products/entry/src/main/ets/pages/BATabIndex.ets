@@ -5,6 +5,8 @@ import { JSON } from '@kit.ArkTS'
 import { BACommonConstants } from '@ohos/bacommon'
 import { XTEasyHUDToast } from '@jxt/xt_hud/src/main/ets/components/_XTEasyHUD'
 import { XTEasyHUD } from '@jxt/xt_hud'
+import { BAHomePage } from '@ohos/bahommodule'
+import { BAMinePage } from '@ohos/baminemodule'
 
 @Entry
 @Component
@@ -19,6 +21,7 @@ struct BATabIndex {
 @Component
 export struct BACustomTabIndex {
   @State currentPageIndex: number = 0
+  @State tabDatas: Array<BATabBarItem> = BATabViewModel.getTabData()
 
   @Builder
   tabbarBuilder(item: BATabBarItem, index: number | undefined) {
@@ -40,13 +43,12 @@ export struct BACustomTabIndex {
   build() {
     Column() {
       Tabs({ barPosition: BarPosition.End, index: this.currentPageIndex }) {
-        ForEach(BATabViewModel.getTabData(), (item: BATabBarItem, index: number) => {
+        ForEach(this.tabDatas, (item: BATabBarItem, index: number) => {
           TabContent() {
             if (index === 0) {
-              Text("不要点我")
-                .onClick(()=>{
-                  XTEasyHUD.showToast("点我干嘛")
-                })
+              BAHomePage()
+            } else if (index === this.tabDatas.length - 1) {
+              BAMinePage()
             }
           }
           .tabBar(this.tabbarBuilder(item, index))

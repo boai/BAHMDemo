@@ -38,6 +38,14 @@
     {
       "name": "BALoginModule",
       "srcPath": "./features/BALoginModule"
+    },
+    {
+      "name": "BAMineModule",
+      "srcPath": "./features/BAMineModule",
+    },
+    {
+      "name": "BAHomeMoudle",
+      "srcPath": "./features/BAHomeMoudle",
     }
   ]
 }
