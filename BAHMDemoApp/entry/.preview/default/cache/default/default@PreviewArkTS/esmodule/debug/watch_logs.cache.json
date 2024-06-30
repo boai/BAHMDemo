@@ -1,1 +1,0 @@
-[{"time":"2024-06-30T03:52:18.307Z","category":"etsTransform","level":"warn","msg":"\u001b[33mArkTS:WARN File: /Users/boai/develop/github/BAHMDemo/BAHMDemoApp/entry/src/main/ets/pages/BALoginIndex.ets:6:1\n It's not a recommended way to export struct with @Entry decorator, which may cause ACE Engine error in component preview mode.","type":"plugin_log"}]
