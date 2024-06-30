@@ -5,16 +5,129 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c09cdc0d-a62f-4626-8ea0-a4bc5950b29a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/Index.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/Index.ets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/src/main/ets/components/BALoginPage.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/src/main/ets/pages/BALoginPage.ets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/Constants/BARouterConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/Constants/BARouterConstants.ets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/pages/BALoginIndex.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/pages/BALoginIndex.ets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/pages/BATabIndex.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/pages/BATabIndex.ets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/pages/Index.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/pages/Index.ets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/element/string.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/element/string.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/en_US/element/string.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/en_US/element/string.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/zh_CN/element/string.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/zh_CN/element/string.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/Index.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/build-profile.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/hvigorfile.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/obfuscation-rules.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/oh-package-lock.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/oh-package.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/ets/Constants/BARouterConstants.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/ets/entryability/EntryAbility.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/ets/entrybackupability/EntryBackupAbility.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/ets/pages/BALoginIndex.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/ets/pages/BATabIndex.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/ets/pages/Index.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/ets/viewmodel/BATabBarItem.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/ets/viewmodel/BATabViewModel.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/module.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/element/color.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/element/string.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/foreground.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/ic_tab_cloud_default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/ic_tab_cloud_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/ic_tab_copy_default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/ic_tab_copy_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/ic_tab_file_default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/ic_tab_file_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/ic_tab_main_default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/ic_tab_main_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/ic_tab_mine_default.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/ic_tab_mine_select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/layered_image.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/media/startIcon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/profile/backup_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/base/profile/main_pages.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/en_US/element/string.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/main/resources/zh_CN/element/string.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/mock/mock-config.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/ohosTest/ets/test/Ability.test.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/ohosTest/ets/test/List.test.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/ohosTest/module.json5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/test/List.test.ets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../BAHMDemoApp/products/entry/src/test/LocalUnit.test.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/BuildProfile.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/BuildProfile.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/Index.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/build-profile.json5" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/build-profile.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/consumer-rules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/consumer-rules.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/hvigorfile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/hvigorfile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/obfuscation-rules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/obfuscation-rules.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/oh-package.json5" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/oh-package.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/src/main/ets/constants/BACommonConstants.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/src/main/ets/constants/BACommonConstants.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/src/main/ets/util/BALogger.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/src/main/ets/util/BALogger.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/src/main/module.json5" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/src/main/module.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/src/main/resources/base/element/string.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/src/main/resources/base/element/string.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/src/main/resources/en_US/element/string.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/src/main/resources/en_US/element/string.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/src/main/resources/zh_CN/element/string.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/src/main/resources/zh_CN/element/string.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/src/ohosTest/ets/test/Ability.test.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/src/ohosTest/ets/test/Ability.test.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/src/ohosTest/ets/test/List.test.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/src/ohosTest/ets/test/List.test.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/src/ohosTest/module.json5" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/src/ohosTest/module.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/src/test/List.test.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/src/test/List.test.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BACommon/src/test/LocalUnit.test.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BACommon/src/test/LocalUnit.test.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/BuildProfile.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/BuildProfile.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/Index.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/Index.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/build-profile.json5" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/build-profile.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/consumer-rules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/consumer-rules.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/hvigorfile.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/hvigorfile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/obfuscation-rules.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/obfuscation-rules.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/oh-package-lock.json5" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/oh-package-lock.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/oh-package.json5" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/oh-package.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/src/main/ets/pages/BALoginPage.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/src/main/ets/pages/BALoginPage.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/src/main/module.json5" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/src/main/module.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/src/main/resources/base/element/string.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/src/main/resources/base/element/string.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/src/main/resources/en_US/element/string.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/src/main/resources/en_US/element/string.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/src/main/resources/zh_CN/element/string.json" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/src/main/resources/zh_CN/element/string.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/src/ohosTest/ets/test/Ability.test.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/src/ohosTest/ets/test/Ability.test.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/src/ohosTest/ets/test/List.test.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/src/ohosTest/ets/test/List.test.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/src/ohosTest/module.json5" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/src/ohosTest/module.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/src/test/List.test.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/src/test/List.test.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/BALoginModule/src/test/LocalUnit.test.ets" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/features/BALoginModule/src/test/LocalUnit.test.ets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/build-profile.json5" beforeDir="false" afterPath="$PROJECT_DIR$/../BAHMDemoApp/build-profile.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/build-profile.json5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/hvigorfile.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/obfuscation-rules.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/oh-package-lock.json5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/oh-package.json5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/Constants/BARouterConstants.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/entryability/EntryAbility.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/entrybackupability/EntryBackupAbility.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/pages/BALoginIndex.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/pages/BATabIndex.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/pages/Index.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/viewmodel/BATabBarItem.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/ets/viewmodel/BATabViewModel.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/module.json5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/element/color.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/element/string.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/foreground.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/ic_tab_cloud_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/ic_tab_cloud_select.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/ic_tab_copy_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/ic_tab_copy_select.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/ic_tab_file_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/ic_tab_file_select.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/ic_tab_main_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/ic_tab_main_select.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/ic_tab_mine_default.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/ic_tab_mine_select.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/layered_image.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/media/startIcon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/profile/backup_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/base/profile/main_pages.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/en_US/element/string.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/main/resources/zh_CN/element/string.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/mock/mock-config.json5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/ohosTest/ets/test/Ability.test.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/ohosTest/ets/test/List.test.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/ohosTest/module.json5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/test/List.test.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../BAHMDemoApp/entry/src/test/LocalUnit.test.ets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -21,7 +21,7 @@
   "modules": [
     {
       "name": "entry",
-      "srcPath": "./entry",
+      "srcPath": "./products/entry",
       "targets": [
         {
           "name": "default",
@@ -33,11 +33,11 @@
     },
     {
       "name": "BACommon",
-      "srcPath": "./BACommon",
+      "srcPath": "./features/BACommon"
     },
     {
       "name": "BALoginModule",
-      "srcPath": "./BALoginModule",
+      "srcPath": "./features/BALoginModule"
     }
   ]
 }

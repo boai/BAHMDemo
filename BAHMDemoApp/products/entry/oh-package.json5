@@ -6,8 +6,8 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
-    "@ohos/baloginmodule": "file:../BALoginModule",
-    "@ohos/bacommon": "file:../BACommon"
+    "@ohos/baloginmodule": "file:../../features/BALoginModule",
+    "@ohos/bacommon": "file:../../features/BACommon"
   }
 }
 
