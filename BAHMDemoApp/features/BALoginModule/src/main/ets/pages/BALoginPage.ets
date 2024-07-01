@@ -74,7 +74,7 @@ export struct BALoginPage {
 
           Button("获取验证码")
             .fontSize(13)
-            .backgroundColor($r('app.color.BV6'))
+            .backgroundColor($r('app.color.theme_color'))
             .width(100)
             .height(40)
             .enabled(this.phone.length > 1)
@@ -82,6 +82,10 @@ export struct BALoginPage {
               right: 20
             })
             .onClick((event: ClickEvent) => {
+              if (!this.isSelectedProtocal) {
+                XTEasyHUD.showToast("请先阅读并同意隐私协议")
+                return
+              }
               if (this.phone.length === 0) {
                 XTEasyHUD.showToast("手机号不能为空")
                 return
@@ -99,7 +103,7 @@ export struct BALoginPage {
 
         Button("登录/注册")
           .fontSize(16)
-          .backgroundColor($r('app.color.BV6'))
+          .backgroundColor($r('app.color.theme_color'))
           .width("60%")
           .height(50)
           .enabled(!this.isPhoneOrPwdEmpty)
@@ -139,7 +143,7 @@ export struct BALoginPage {
 
         Text("用户协议、隐私保护政策")
           .fontSize(14)
-          .fontColor($r('app.color.BV6'))
+          .fontColor($r('app.color.theme_color'))
 
       }
       .width("80%")

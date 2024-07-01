@@ -3,6 +3,10 @@
     {
       "name": "BV6",
       "value": "#2ED9C3"
+    },
+    {
+      "name": "theme_color",
+      "value": "#1AAD19"
     }
   ]
 }

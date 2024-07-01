@@ -29,8 +29,8 @@ export struct BACustomTabIndex {
       Image(this.currentPageIndex === index ? item.selectedIcon : item.defaultIcon)
         .width(24)
         .height(24)
-      Text(item.title)
-        .fontColor(this.currentPageIndex === index ? Color.Blue : Color.Gray)
+      Text(item.title)//"#1AAD19"
+        .fontColor(this.currentPageIndex === index ? $r('app.color.theme_color') : Color.Gray)
         .fontSize(12)
         .margin({ top: 4 })
         .opacity(this.currentPageIndex === index ? 1 : 0.7)

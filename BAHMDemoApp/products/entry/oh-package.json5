@@ -6,9 +6,13 @@
   "author": "",
   "license": "Apache-2.0",
   "dependencies": {
+    //登录组件
     "@ohos/baloginmodule": "file:../../features/BALoginModule",
+    //公共组件
     "@ohos/bacommon": "file:../../features/BACommon",
+    //首页组件
     "@ohos/bahommodule": "file:../../features/BAHomeMoudle",
+    //个人中心组件
     "@ohos/baminemodule": "file:../../features/BAMineModule"
   }
 }
