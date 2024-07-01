@@ -7,9 +7,12 @@ import { XTEasyHUD, XTHUDToastOptions } from '@jxt/xt_hud'
 
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    // 应用的HAP在首次加载的时，为该Module初始化操作
     this.initCommonConfiger()
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
   }
+
+
 
   onDestroy(): void {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onDestroy');
